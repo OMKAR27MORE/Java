@@ -1,0 +1,162 @@
+import java.awt.*;
+import java.awt.event.*;
+class operations implements ActionListener{
+ 
+ Label vegmenu = new Label("Veg Menu");
+ Label DalRice = new Label("DalRice");
+ Label Panipuri = new Label("Panipuri");
+ Label Pavbhaji = new Label("Pavbhaji");
+ Label koki = new Label("koki");
+ Label Masaladosa = new Label("Masaladosa");
+ Label PannerTikka = new Label("PannerTikka");
+
+ Checkbox DalRicec = new Checkbox();
+ Checkbox Panipuric = new Checkbox();
+ Checkbox Pavbajaic = new Checkbox();
+ Checkbox kokic = new Checkbox();
+ Checkbox Masaladosac = new Checkbox();
+ Checkbox PannerTikka = new Checkbox();
+
+ TextField DalRiceq = new TextField();
+ TextField Panipuriq = new TextField();
+ TextField Pavbajaiq = new TextField();
+ TextField kokiq = new TextField();
+ TextField Masaladosaq = new TextField();
+ TextField PannerTikka = new TextField();
+ 
+ Label nonvegmenu = new Label("Non Veg Menu");
+ Label ChickenTandoori = new Label("ChickenTandoori");
+ Label Fish = new Label("Fish");
+ Label Prawns = new Label("Prawns");
+ Label EggCurry = new Label("EggCurry");
+ Label ChickenFriedRice = new Label("ChickenFriedRice");
+ Label ChickenCrispy = new Label("ChickenCrispy");
+ 
+
+ Checkbox ChickenTandooric = new Checkbox();
+ Checkbox Fishc = new Checkbox();
+ Checkbox Prawnsc = new Checkbox();
+ Checkbox EggCurryc = new Checkbox();
+ Checkbox ChickenFriedRicec = new Checkbox();
+ Checkbox ChickenCrispyc = new Checkbox();
+
+ TextField ChickenTandooriq = new TextField();
+ TextField Fishq = new TextField();
+ TextField Prawnsq = new TextField();
+ TextField EggCurryq = new TextField();
+ TextField ChickenFriedRiceq = new TextField();
+ TextField ChickenCrispyq = new TextField(); 
+
+ Label Dessertsmenu = new Label("Dessertsmenu");
+ Label Gulabjamun = new Label("Gulabjamun");
+ Label Rassgulla = new Label("Rassgulla");
+ 
+
+  
+ Button order = new Button("order");
+ Button cancel = new Button("cancel");
+ public operations() {
+ Frame frame = new Frame("Food ordering System");
+
+ vegmenu.setBounds(20,40,80,30);
+ 
+ dalRicec.setBounds(20,60,20,30);
+ dalRice.setBounds(40,60,60,30);
+ dalRiceq.setBounds(100,60,80,30);
+
+ panipuric.setBounds(20,100,20,30);
+ panipuri.setBounds(40,100,60,30); 
+ panipuriq.setBounds(100,100,80,30); 
+
+ pavbajaic.setBounds(20,140,20,30);
+ pavbajai.setBounds(40,140,60,30);
+ pavbajaiq.setBounds(100,140,80,30);
+
+ kokic.setBounds(20,180,20,30);
+ koki.setBounds(40,180,60,30);
+ kokiq.setBounds(100,180,80,30);
+ 
+ masaladosac.setBounds(20,240,20,30);
+ masaladosa.setBounds(40,240,70,30);
+ masaladosaq.setBounds(120,240,80,30);
+
+ nonvegmenu.setBounds(20,280,80,30);
+ 
+ chickenc.setBounds(20,320,20,30);
+ chicken.setBounds(40,320,60,30);
+ chickenq.setBounds(100,320,80,30);
+
+ chickenc.setBounds(20,300,20,30);
+ chicken.setBounds(40,300,60,30);
+ chickenq.setBounds(100,300,80,30);
+ 
+ chickenc.setBounds(20,300,20,30);
+ chicken.setBounds(40,300,60,30);
+ chickenq.setBounds(100,300,80,30);
+ 
+ chickenc.setBounds(20,300,20,30);
+ chicken.setBounds(40,300,60,30);
+ chickenq.setBounds(100,300,80,30);
+
+ chickenc.setBounds(20,300,20,30);
+ chicken.setBounds(40,300,60,30);
+ chickenq.setBounds(100,300,80,30);
+
+ //button.addActionListener(this);
+
+
+ frame.add(vegmenu);
+ frame.add(dalRicec);
+ frame.add(dalRice);
+ frame.add(dalRiceq);
+ 
+ frame.add(panipuric);
+ frame.add(panipuri);
+ frame.add(panipuriq);
+ 
+ frame.add(pavbajaic); 
+ frame.add(pavbajai);
+ frame.add(pavbajaiq);
+ 
+ frame.add(kokic);
+ frame.add(koki);
+ frame.add(kokiq);
+ 
+ frame.add(masaladosac);
+ frame.add(masaladosa);
+ frame.add(masaladosaq);
+
+ frame.add(nonvegmenu);
+ frame.add(chickenc);
+ frame.add(chicken);
+ frame.add(chickenq);
+
+ //frame.add(button);
+ frame.setSize(900,900);
+ frame.setLayout(null);
+ frame.setVisible(true);  
+ frame.addWindowListener(new MyWindowAdapter());
+ }
+ 
+ public void actionPerformed(ActionEvent  e)
+{
+  int no1,ans=1;
+  no1=Integer.parseInt(dalRiceq.getText());
+ for(int i=1;i<=no1;i++)
+ {
+  ans=ans*i; 
+}
+ //tf2.setText(" "+ans);
+}
+ public static void main(String args[]){
+ //new operations();
+ operations op = new operations();
+}
+}
+class MyWindowAdapter  extends  WindowAdapter
+{
+public void windowClosing(WindowEvent  e)
+{
+ System.exit(0);
+} 
+}
